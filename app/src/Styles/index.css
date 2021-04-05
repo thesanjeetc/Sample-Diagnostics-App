@@ -1,0 +1,93 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#page {
+  border: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.chart-wrapper {
+  width: 46%;
+  height: 46vh;
+  padding: 1%;
+  display: inline-block;
+}
+
+@media (max-width: 700px) {
+  .chart-wrapper {
+    width: 96%;
+  }
+}
+
+.tile-rounded {
+  border-radius: 0.5em;
+  height: 50%;
+}
+
+.bg-dark-tile {
+  background-color: #1c2138;
+  color: #e2e8f0;
+  transition: 0.2s;
+}
+
+.bg-dark-menu {
+  background-color: #242a42;
+  color: #e2e8f0;
+  transition: 0.2s;
+}
+
+.bg-light-main {
+  background-color: #e2e8f0;
+  transition: 0.2s;
+}
+
+.bg-main {
+  border-right: 3px solid #5271ff;
+  color: #5271ff;
+  transition: 0.2s;
+}
+
+.bg-light-tile {
+  background-color: #f7fafc;
+  color: #718096;
+  transition: 0.2s;
+}
+
+.bg-light-menu {
+  background-color: #cbd5e0;
+  color: #718096;
+  transition: 0.2s;
+}
+
+.bg-dark-main {
+  background-color: #171c30;
+  transition: 0.2s;
+}
+
+.menubutton {
+  transition: 0.1s ease;
+  padding: 0%;
+  font-size: 20px;
+}
+
+button,
+input,
+canvas,
+a {
+  outline: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menubutton:hover {
+    background-color: #5271ff;
+    color: white;
+  }
+}

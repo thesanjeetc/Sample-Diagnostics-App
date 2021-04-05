@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Sample Diagnostics Extension",
+  "version": "1.0.0",
+  "key": "MIGfMA3GCSqGSIb3DFEBAQUAA4GNADFBiQKBgQDcBHwzDvyBQ6bDppkIs9MP2ksKqCMyXQ/A52JivHZKh4YO/9vJsT3oaZhSpDCE9RCocOEQvwsHtLReW2nUEc6OLLyoCFFxIb7KkLGvmfakkut/fFdNJYh0xOTbSN8YvLWcqph02XAY2Y/f1AL7vfO1cuCqtkMt8hFrHGWxDdf9CQIDAQAB",
+  "permissions": ["system.cpu","system.memory", "*://localhost/*"],
+  "externally_connectable": {
+    "matches": ["*://localhost/*"]
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
