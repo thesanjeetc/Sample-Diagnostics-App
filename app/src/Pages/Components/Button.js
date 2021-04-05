@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BaseComponent } from "../../Components/Base";
+import { BaseComponent } from "./Base";
 
 const Button = (props) => {
   return (

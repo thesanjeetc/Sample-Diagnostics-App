@@ -5,7 +5,7 @@ import {
   faStream,
   faMicrochip,
 } from "@fortawesome/free-solid-svg-icons";
-import { MenuButton } from "../Dashboard/Components/Button";
+import { MenuButton } from "./Button";
 import { withRouter } from "react-router-dom";
 
 const MenuBar = (props) => {

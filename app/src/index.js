@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SystemData from "./Pages/Dashboard/SystemData";
+import SystemData from "./Pages/SystemData/SystemData";
 import SystemDiagnosticsManager from "./Pages/SystemDiagnostics/SystemDiagnostics";
 import SystemState from "./Pages/SystemState/SystemState";
 import "./Styles/index.css";
