@@ -1,4 +1,4 @@
-const interval = 1000;
+const interval = 1;
 
 let systemInfo = {
   cpu: {
@@ -14,14 +14,13 @@ let systemInfo = {
 };
 
 let prevCPUInfo;
-let previousCPU = 0;
 
 let handles = {};
 handles.systemInfo = handleSystemInfo;
 
-chrome.runtime.onConnectExternal.addListener((port) =>
-  port.onMessage.addListener((req) => callback(port, req))
-);
+chrome.runtime.onConnectExternal.addListener((port) => {
+  port.onMessage.addListener((req) => callback(port, req));
+});
 
 chrome.system.cpu.getInfo(function (info) {
   systemInfo.cpu.name = info.modelName;
@@ -29,7 +28,8 @@ chrome.system.cpu.getInfo(function (info) {
   prevCPUInfo = info;
 });
 
-setInterval(fetchSystemInfo, interval);
+chrome.alarms.onAlarm.addListener(fetchSystemInfo);
+chrome.alarms.create({ periodInMinutes: interval / 60 });
 
 function callback(port, req) {
   if (handles[req.id] != null) {
@@ -44,7 +44,6 @@ function handleSystemInfo(port, req) {
 function fetchSystemInfo() {
   fetchCPUInfo();
   fetchMemoryInfo();
-  console.log(systemInfo);
 }
 
 function fetchCPUInfo() {
